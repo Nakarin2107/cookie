@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors
 
 import 'package:api/bottom_bar.dart';
 import 'package:api/cookie_page.dart';
@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage>
         padding: EdgeInsets.only(left: 20.0),
         children: <Widget>[
           SizedBox(height: 15.0),
-          Text('Cookie King',
+          Text('Rubiks Cube',
               style: TextStyle(
                   fontFamily: 'Varela',
                   fontSize: 42.0,
@@ -74,21 +74,21 @@ class _MyHomePageState extends State<MyHomePage>
               unselectedLabelColor: Color(0xFFCDCDCD),
               tabs: [
                 Tab(
-                  child: Text('Cookies',
+                  child: Text('Rubiks 2x2',
                       style: TextStyle(
                         fontFamily: 'Varela',
                         fontSize: 21.0,
                       )),
                 ),
                 Tab(
-                  child: Text('Cookie cake',
+                  child: Text('Rubiks 3x3',
                       style: TextStyle(
                         fontFamily: 'Varela',
                         fontSize: 21.0,
                       )),
                 ),
                 Tab(
-                  child: Text('Ice cream',
+                  child: Text('Rubiks 4x4',
                       style: TextStyle(
                         fontFamily: 'Varela',
                         fontSize: 21.0,
@@ -101,17 +101,17 @@ class _MyHomePageState extends State<MyHomePage>
                 child: TabBarView(
                   controller: _tabController,
                   children: [
-                    CookiePage(),
-                    CookiePage(),
-                    CookiePage(),
+                    RubiksPage(),
+                    RubiksPage(),
+                    RubiksPage(),
                   ]
                 )
               )
         ],
       ),
       floatingActionButton: FloatingActionButton(onPressed: () {},
-      backgroundColor: Color(0xFFF17532),
-      child: Icon(Icons.fastfood),
+      backgroundColor: Color.fromRGBO(241, 117, 50, 1),
+      child: Icon(Icons.tiktok_outlined),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomBar(),

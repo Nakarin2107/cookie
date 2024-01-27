@@ -1,13 +1,11 @@
-// ignore_for_file: prefer_const_constructors
-
+// ignore_for_file: prefer_const_constructors, prefer_typing_uninitialized_variables, non_constant_identifier_names, avoid_types_as_parameter_names
 import 'package:api/bottom_bar.dart';
 import 'package:flutter/material.dart';
 
+class Rukibsking extends StatelessWidget {
+  final assetPath, rukibs, rubiksname;
 
-class CookieDetail extends StatelessWidget {
-  final assetPath, cookieprice, cookiename;
-
-  CookieDetail({this.assetPath, this.cookieprice, this.cookiename});
+  Rukibsking({this.assetPath, this.rukibs, this.rubiksname, required String });
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +57,7 @@ class CookieDetail extends StatelessWidget {
             ),
             SizedBox(height: 20.0),
             Center(
-              child: Text(cookieprice,
+              child: Text(rukibs,
                   style: TextStyle(
                       fontFamily: 'Varela',
                       fontSize: 22.0,
@@ -68,7 +66,7 @@ class CookieDetail extends StatelessWidget {
             ),
             SizedBox(height: 10.0),
             Center(
-              child: Text(cookiename,
+              child: Text(rubiksname,
                   style: TextStyle(
                       color: Color(0xFF575E67),
                       fontFamily: 'Varela',
@@ -78,7 +76,7 @@ class CookieDetail extends StatelessWidget {
             Center(
               child: Container(
                 width: MediaQuery.of(context).size.width - 50.0,
-                child: Text('Cold, creamy ice cream sandwiched between delicious deluxe cookies. Pick your favorite deluxe cookies and ice cream flavor.',
+                child: Text('"ช้อปครบ 1,000 บาท และรับส่วนลด 20% พร้อมทั้งน้ำยารูบิค 2 ขวดฟรี! โปรโมชั่นนี้เพียงจ่ายเพียง 1,000 บาท คุณจะได้ส่วนลดทันที 20% และยังได้รับน้ำยารูบิค 2 ขวดเป็นของแถม! ไม่พลาดโอกาสนี้"',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                       fontFamily: 'Varela',
@@ -113,7 +111,7 @@ class CookieDetail extends StatelessWidget {
 
       floatingActionButton: FloatingActionButton(onPressed: () {},
       backgroundColor: Color(0xFFF17532),
-      child: Icon(Icons.fastfood),
+      child: Icon(Icons.tiktok),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomBar(),

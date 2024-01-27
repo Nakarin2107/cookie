@@ -1,8 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:api/cookie_detail.dart';
 import 'package:flutter/material.dart';
 
-
-class CookiePage extends StatelessWidget {
+class RubiksPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,13 +22,13 @@ class CookiePage extends StatelessWidget {
                 mainAxisSpacing: 15.0,
                 childAspectRatio: 0.8,
                 children: <Widget>[
-                  _buildCard('Rubiks', '\$3.99', 'images/cookiemint.jpg',
+                  _buildCard('GAN 12', '\$100.99', 'images/gan.png',
                       false, false, context),
-                  _buildCard('Cookie cream', '\$5.99', 'images/cookiecream.jpg',
+                  _buildCard('RS3M', '\$40.99', 'images/rs3m.jpg',
                       true, false, context),
-                  _buildCard('Cookie classic', '\$1.99',
-                      'images/cookieclassic.jpg', false, true, context),
-                  _buildCard('Cookie choco', '\$2.99', 'images/cookiechoco.jpg',
+                  _buildCard('Qiyi m pro', '\$75.99','images/qi.jpg', 
+                      false, true, context),
+                  _buildCard('GAN 13', '\$127.99', 'images/gan2.png',
                       false, false, context)
                 ],
               )),
@@ -44,10 +45,10 @@ class CookiePage extends StatelessWidget {
         child: InkWell(
             onTap: () {
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => CookieDetail(
+                  MaterialPageRoute(builder: (context) => Rukibsking(
                     assetPath: imgPath,
-                    cookieprice:price,
-                    cookiename: name
+                    rukibs:price,
+                    rubiksname: name, String: null,
                   )));
             },
             child: Container(
@@ -62,12 +63,12 @@ class CookiePage extends StatelessWidget {
                     color: Colors.white),
                 child: Column(children: [
                   Padding(
-                      padding: EdgeInsets.all(5.0),
+                      padding: EdgeInsets.all(5.0), 
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             isFavorite
-                                ? Icon(Icons.favorite, color: Color(0xFFEF7532))
+                                ? Icon(Icons.favorite, color: Color.fromRGBO(255, 0, 0, 3))
                                 : Icon(Icons.favorite_border,
                                     color: Color(0xFFEF7532))
                           ])),
@@ -120,8 +121,13 @@ class CookiePage extends StatelessWidget {
                               Icon(Icons.add_circle_outline,
                                   color: Color(0xFFD17E50), size: 12.0),
                             ]
-                          ]))
-                ]))));
+                          ])
+                        )
+                      ]
+                  )
+                )
+              )
+            );
   }
 }
 // MILLUKI
